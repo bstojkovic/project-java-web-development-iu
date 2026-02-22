@@ -18,6 +18,15 @@ This application is making use of the lesser-known **FARM** stack which includes
 
 # Iterative development - intermediate products
 
+## Iteration 0.1
+
+### Success criteria
+
+* Frontend skeleton initialized
+* Runs locally and loads in browser
+* Screens:
+  * Default React.js scaffold screen
+
 # Test cases
 
 # Demo

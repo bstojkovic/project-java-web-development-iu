@@ -8,3 +8,8 @@
 * Planned out and edited the README.md file, writing out a structure that will make it easier to track development of this application
   * Filled in the first heading with information from Phase 1 presentation, and added a tech stack note
 * Created a docs/ folder with files for tracking all changes and decisions
+
+## 22.2.2026.
+* Googled React.js installation instructions
+* Encountered a design decision on how to create React app, that will be outlined in [design notes](./design-notes.md)
+  * Chose to try creating a React app from scratch
