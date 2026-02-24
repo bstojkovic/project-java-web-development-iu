@@ -13,3 +13,8 @@
 * Googled React.js installation instructions
 * Encountered a design decision on how to create React app, that will be outlined in [design notes](./design-notes.md)
   * Chose to try creating a React app from scratch
+
+## 24.2.2026.
+* Continued reading React.js installation instructions
+* Encountered a design decision on which tool to use to actually build React app, that will be outlined in [design notes](./design-notes.md)
+  * Chose to try using Vite
