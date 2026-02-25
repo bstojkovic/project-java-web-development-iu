@@ -18,3 +18,8 @@
 * Continued reading React.js installation instructions
 * Encountered a design decision on which tool to use to actually build React app, that will be outlined in [design notes](./design-notes.md)
   * Chose to try using Vite
+
+## 25.2.2026.
+* React.js installation instructions via Vite shows a command to be ran in order to build a React scaffold, which I ran (`npm create vite@latest frontend -- --template react-ts`)
+  * For framework, I chose React, and for variant I chose TypeScript because I want to learn more about static typing and the benefits it comes with
+* After installation, I visited localhost and confirmed the Vite + React skeleton is running in the browser, satisfying iteration 0.1 criteria
