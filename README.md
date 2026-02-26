@@ -27,6 +27,20 @@ This application is making use of the lesser-known **FARM** stack which includes
 * Screens:
   * Default React.js scaffold screen
 
+## Iteration 0.2
+
+### Success criteria
+
+* Runs locally and loads in browser
+* Screens:
+  * Homepage - repository listing all projects
+  * Project view - form for creating a new or editing an existing project
+* Navigation
+  * Homepage has a link to Project view
+  * Project view has a link to Homepage
+* Functionality
+  * In this iteration, only a blank screen with a link is shown for each view
+
 # Test cases
 
 # Demo
