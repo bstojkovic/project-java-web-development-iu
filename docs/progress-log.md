@@ -26,3 +26,16 @@
 
 ## 26.2.2026.
 * Defined Iteration 0.2 success criteria, including views, user flow, and functionality (minimal for this iteration)
+
+## 27.2.2026.
+* Looked at `frontend/index.html` and saw that it references `src/main.tsx`
+* Opened `src/main.tsx` and saw that the application is loaded from `App.tsx`
+* Changed `App.tsx` to only include a blank link
+* Removed:
+  * (for now) non-existent state by deleting `useState`
+  * (for now) unnecessary imports
+  * React + Vite skeleton assets
+* Tried running the app by using commands `npm run`, `npm start`, and `npm run dev` but the same error appeared
+  * The error says that package.json doesn't exist, while I can clearly see it in the directory
+* Figured out my working directory was not `frontend/`, so I changed it and ran `npm run dev` and it worked
+  * But I encountered an error because I forgot to save `App.tsx`, so I saved it, and got presented by a blank page with a blank link (🥳)
