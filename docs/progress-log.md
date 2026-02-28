@@ -39,3 +39,14 @@
   * The error says that package.json doesn't exist, while I can clearly see it in the directory
 * Figured out my working directory was not `frontend/`, so I changed it and ran `npm run dev` and it worked
   * But I encountered an error because I forgot to save `App.tsx`, so I saved it, and got presented by a blank page with a blank link (🥳)
+
+## 28.2.2026.
+* Read React.js documentation and saw that `useState` can be used to manage state
+  * This way I can, in this iteration, use state to switch between two views
+  * Later, I can extract components and work on those
+* For some reason, after adding state, nothing is being shown on the page
+  * The web browser console says "Invalid hook call"
+  * The functions and state need to be inside the `App` function, which resolved the error
+* But now the state doesn't change
+  * Fixed it by actually changing state instead of applying the same state (🤦)
+* The page now has two 'views' and the user can transition between them, satisfying iteration 0.2 criteria
