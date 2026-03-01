@@ -50,3 +50,8 @@
 * But now the state doesn't change
   * Fixed it by actually changing state instead of applying the same state (🤦)
 * The page now has two 'views' and the user can transition between them, satisfying iteration 0.2 criteria
+
+## 1.3.2026.
+* Searched React.js for a way to separate components (views) in order to refactor the current code structure for clarity and maintainability
+  * Separated inline views into components
+  * Decided to use a function that checks which view is current and returns a component
