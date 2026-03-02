@@ -41,6 +41,19 @@ This application is making use of the lesser-known **FARM** stack which includes
 * Functionality
   * In this iteration, only a blank screen with a link is shown for each view
 
+## Iteration 0.3
+
+### Success criteria
+
+* Runs locally and loads in browser
+* Views:
+  * Project Repository
+    * A bullet list of dummy-data projects (with titles only for this iteration)
+  * Project Form
+    * A placeholder HTML form containing project details (title, description, completion percentage)
+* Navigation:
+  * Button is used to navigate between the two views
+
 # Test cases
 
 # Demo
