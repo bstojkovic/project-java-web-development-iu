@@ -58,3 +58,13 @@
 
 ## 2.3.2026.
 * Defined Iteration 0.3 success criteria, including views' contents and navigation
+
+## 3.3.2026.
+* Created an ordered list of project titles (numbered)
+* Searched React.js documentation for map; found `Children` API and used its `map` function
+  * Created an array of project titles and rendered them using `Children.map`
+* Noticed that `Children` API is legacy, and there are new, better ways to do the same thing
+  * Figured out that the vanilla `map` works better, but with a caveat that each item needs to have an ID inside `key` property
+  * Changed the implementation to use the `map` method
+  * Turned project array into an array of objects with ID and title for each project
+  * Added `key` property to the rendered `li`
