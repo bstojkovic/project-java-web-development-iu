@@ -68,3 +68,11 @@
   * Changed the implementation to use the `map` method
   * Turned project array into an array of objects with ID and title for each project
   * Added `key` property to the rendered `li`
+
+## 4.3.2026.
+* Created a simple HTML form
+  * Got an error for `for=` attribute, which said `htmlFor` should be used instead
+  * Tried using `value` for completion percentage, but that fixed the value to `0` and could not be changed
+    * Instead, `defaultValue` should be used
+* Searched React.js documentation for using Forms, added `action=` with a dummy function that logs to console for this iteration
+* The application now has two dummy views with navigation, satisfying iteration 0.3 criteria
