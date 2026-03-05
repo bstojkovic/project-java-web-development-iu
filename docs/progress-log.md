@@ -76,3 +76,10 @@
     * Instead, `defaultValue` should be used
 * Searched React.js documentation for using Forms, added `action=` with a dummy function that logs to console for this iteration
 * The application now has two dummy views with navigation, satisfying iteration 0.3 criteria
+
+## 5.3.2026.
+* Defined Iteration 0.4 success criteria, including a new usage flow
+* Added `onClick` property to rendered `<li>` elements with console log
+  * Looked up React.js documentation, switched to an anonymous function which passes the current project
+    * Had issues with implicit `any` type, ended up explicitly defining as `any` until **projects become components (TODO)**
+  * Logged project id and title successfully to console on click

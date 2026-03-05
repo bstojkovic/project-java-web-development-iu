@@ -7,13 +7,22 @@ function Repository() {
     { id: 5, title: "Project 5" },
   ];
 
+  function projectClicked(project: any) {
+    console.log(project.id, project.title);
+  }
+
   return (
     <>
       <div>
         <span>Project Repository</span>
         <ol>
           {projects.map(project => {
-            return <li key={project.id}>{project.title}</li>
+            return <li
+              key={project.id}
+              onClick={()=>{projectClicked(project)}}
+            >
+              {project.title}
+            </li>
           })}
         </ol>
       </div>
