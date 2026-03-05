@@ -54,6 +54,20 @@ This application is making use of the lesser-known **FARM** stack which includes
 * Navigation:
   * Button is used to navigate between the two views
 
+## Iteration 0.4
+
+### Success criteria
+
+* Runs locally and loads in browser
+* Views:
+  * Project Repository
+  * Project Form
+* Functionality:
+  * Clicking on a project in Project Repository opens prefilled Project Form with the details of the project (only title for this iteration)
+  * Clicking on "Cancel" button returns to Project Repository without committing any changes
+  * Clicking "Submit" on Project Form changes the project object, which can then be viewed in Project Repository
+  * "Change View" button is obsolete at this point and is removed
+
 # Test cases
 
 # Demo
