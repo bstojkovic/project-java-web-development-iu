@@ -1,4 +1,6 @@
-function ProjectForm() {
+import { Project } from "../App";
+
+function ProjectForm(project: Project) {
   function formSubmit() {
     console.log("Form submitted!");
   }
@@ -9,7 +11,7 @@ function ProjectForm() {
         <span>Project Form</span>
         <form action={formSubmit}>
           <label htmlFor="title">Project title: </label>
-          <input placeholder="Type in a title..." aria-label="title"></input>
+          <input placeholder="Type in a title..." aria-label="title" value={project.title}></input>
           <br></br>
 
           <label htmlFor="description">Project description: </label>

@@ -81,5 +81,19 @@
 * Defined Iteration 0.4 success criteria, including a new usage flow
 * Added `onClick` property to rendered `<li>` elements with console log
   * Looked up React.js documentation, switched to an anonymous function which passes the current project
-    * Had issues with implicit `any` type, ended up explicitly defining as `any` until **projects become components (TODO)**
+    * Had issues with implicit `any` type, ended up explicitly defining as `any` until projects become components
   * Logged project id and title successfully to console on click
+
+## 6.3.2026.
+* Searched React documentation for a way to handle state from child to parent
+  * Saw a way to share state between components and a term "Lifting state up"
+  * Tried solving the exercise/challenge on the documentation page, struggled, saw a simple syntax issue, and then solved it
+* Added a callback from Repository component back to the parent App
+* Removed obsolete button and function for switching views
+* Added a function for setting current view
+* Defined a class Project
+  * Used `| undefined` for attributes to prevent errors, will fix later
+* Looked up class documentation for TypeScript and defined a constructor, fixing above errors, removing `| undefined` type hints
+* I need to figure out how to remove `any` type hints, so far without success: **TODO**
+* Implemented functionality that shows ProjectForm for a project when one of them is clicked in the Repository
+  * Did a lot of trial and error, with slight syntax issues presenting the biggest problem

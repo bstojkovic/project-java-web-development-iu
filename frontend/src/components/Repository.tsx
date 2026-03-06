@@ -1,14 +1,16 @@
-function Repository() {
+import { Project } from "../App";
+
+function Repository({onProjectClicked}: any) {
   var projects = [
-    { id: 1, title: "Project 1" },
-    { id: 2, title: "Project 2" },
-    { id: 3, title: "Project 3" },
-    { id: 4, title: "Project 4" },
-    { id: 5, title: "Project 5" },
+    new Project(1, "Project 1"),
+    new Project(2, "Project 2"),
+    new Project(3, "Project 3"),
+    new Project(4, "Project 4"),
+    new Project(5, "Project 5"),
   ];
 
-  function projectClicked(project: any) {
-    console.log(project.id, project.title);
+  function projectClicked(project: Project) {
+    onProjectClicked(project);
   }
 
   return (
