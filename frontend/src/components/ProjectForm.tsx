@@ -1,8 +1,19 @@
+import { useState } from "react";
 import { Project } from "../App";
 
-function ProjectForm(project: Project) {
-  function formSubmit() {
-    console.log("Form submitted!");
+interface ProjectFormProps {
+  currentProject: Project,
+  onFormCancelled: Function,
+  onProjectSubmitted: Function,
+}
+
+function ProjectForm(props: ProjectFormProps) {
+  const [title, setTitle] = useState(props.currentProject.title);
+  const [description, setDescription] = useState(props.currentProject.description);
+  const [completion, setCompletion] = useState(props.currentProject.completion);
+
+  function formSubmit(formData: FormData) {
+    props.onProjectSubmitted(formData);
   }
 
   return (
@@ -11,20 +22,21 @@ function ProjectForm(project: Project) {
         <span>Project Form</span>
         <form action={formSubmit}>
           <label htmlFor="title">Project title: </label>
-          <input placeholder="Type in a title..." aria-label="title" value={project.title}></input>
+          <input placeholder="Type in a title..." aria-label="title" name="title" value={title} onChange={e => setTitle(e.target.value)}></input>
           <br></br>
 
           <label htmlFor="description">Project description: </label>
-          <input placeholder="Type in a description..." aria-label="description"></input>
+          <input placeholder="Type in a description..." aria-label="description" name="description" value={description} onChange={e => setDescription(e.target.value)}></input>
           <br></br>
 
           <label htmlFor="completion">Completion percentage: </label>
-          <input type="number" min="0" max="100" aria-label="completion" defaultValue="0" />
+          <input type="number" min="0" max="100" aria-label="completion" name="completion" value={completion} onChange={e => setCompletion(Number(e.target.value))} />
           <span>%</span>
           <br></br>
           
           <button>Submit</button>
         </form>
+        <button onClick={()=>{props.onFormCancelled()}}>Cancel</button>
       </div>
     </>
   )

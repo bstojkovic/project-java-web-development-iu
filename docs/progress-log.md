@@ -94,6 +94,17 @@
 * Defined a class Project
   * Used `| undefined` for attributes to prevent errors, will fix later
 * Looked up class documentation for TypeScript and defined a constructor, fixing above errors, removing `| undefined` type hints
-* I need to figure out how to remove `any` type hints, so far without success: **TODO**
+* I need to figure out how to remove `any` type hints, so far without success
 * Implemented functionality that shows ProjectForm for a project when one of them is clicked in the Repository
   * Did a lot of trial and error, with slight syntax issues presenting the biggest problem
+
+## 7.3.2026.
+* Defined type hint for function as parameter with `Function`
+* Added `onCancel` and `onSubmit` callback functions on `ProjectForm`
+  * `onCancel` uses a button outside the form to cancel editing the project
+* For now, submitting only logs to the console that the project information has been submitted
+* Added submitting the form, but got a React Hooks error
+  * Read React.js documentation and after a while figured out I'm rendering `ProjectForm`/`Repository` inside a conditional
+  * Saw section on conditional rendering, debugged current code and implemented ternary operator with TSX instead of functions
+  * Saw section on props, added props to all child components for type hinting
+* Moved projects to `App`
