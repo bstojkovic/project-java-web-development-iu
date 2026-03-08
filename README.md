@@ -68,6 +68,21 @@ This application is making use of the lesser-known **FARM** stack which includes
   * Clicking "Submit" on Project Form changes the project object, which can then be viewed in Project Repository
   * "Change View" button is obsolete at this point and is removed
 
+## Iteration 0.5
+
+### Success criteria
+
+* Runs locally and loads in browser
+* Components:
+  * App
+  * Project Repository
+  * Project Form
+  * Project
+* Functionality
+  * Introduce a new `Project` component which renders all project details
+  * Ability to add new project via a "Add Project" button in Project Repository
+  * Ability to remove a project via a "Remove Project" button in Project Form
+
 # Test cases
 
 # Demo
