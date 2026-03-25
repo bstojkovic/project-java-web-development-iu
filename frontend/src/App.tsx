@@ -4,37 +4,26 @@ import './App.css';
 import Repository from './components/Repository';
 import ProjectForm from './components/ProjectForm';
 
-export class Project {
+export interface ProjectProps {
   id: number
   title: string
   description: string
   completion: number
-
-  constructor(id: number, title: string) {
-    this.id = id;
-    this.title = title;
-    this.description = "";
-    this.completion = 0;
-  }
 }
 
 const projects = [
-  new Project(1, "Project 1"),
-  new Project(2, "Project 2"),
-  new Project(3, "Project 3"),
-  new Project(4, "Project 4"),
-  new Project(5, "Project 5"),
+  {id: 1, title: "Project 1", description: "Test", completion: 0}
 ];
 
 function App() {
   const [currentViewStr, setCurrentViewStr] = useState('repository');
-  const [currentProject, setCurrentProject] = useState(new Project(0, ''));
+  const [currentProject, setCurrentProject] = useState(projects[0]);
 
   function setCurrentView(viewName: string) {
     setCurrentViewStr(viewName);
   }
 
-  function onProjectClicked(project: Project) {
+  function onProjectClicked(project: ProjectProps) {
     setCurrentProject(project);
     setCurrentView('project');
   }

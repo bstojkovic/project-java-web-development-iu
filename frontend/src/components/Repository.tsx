@@ -1,13 +1,14 @@
-import { Project } from "../App";
+import type { ProjectProps } from "../App";
+import Project from "./Project";
 
 interface RepositoryProps {
   onProjectClicked: Function,
-  projects: Project[],
+  projects: ProjectProps[],
 }
 
 function Repository(props: RepositoryProps) {
-  function projectClicked(project: Project) {
-    props.onProjectClicked(project);
+  function projectClicked(projectProps: ProjectProps) {
+    props.onProjectClicked(projectProps);
   }
 
   return (
@@ -15,13 +16,8 @@ function Repository(props: RepositoryProps) {
       <div>
         <span>Project Repository</span>
         <ol>
-          {props.projects.map(project => {
-            return <li
-              key={project.id}
-              onClick={()=>{projectClicked(project)}}
-            >
-              {project.title}
-            </li>
+          {props.projects.map(projectProps => {
+            return Project(projectProps, projectClicked)
           })}
         </ol>
       </div>

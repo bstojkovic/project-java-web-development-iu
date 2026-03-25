@@ -108,3 +108,12 @@
   * Saw section on conditional rendering, debugged current code and implemented ternary operator with TSX instead of functions
   * Saw section on props, added props to all child components for type hinting
 * Moved projects to `App`
+
+## 25.3.2026.
+* Removed `Project` class
+* Created `Project` component as a separate file and filled it in with rendered list item with properties
+* Was confusing `Project` component and project data
+* Created a `ProjectProps` interface to hold the Project's data type inside the App
+* Replaced current `Project` class instance list into project data list
+* Redefined all references to project class into `ProjectProps` interface
+* Used `Project` component to render it inside the `Repository`

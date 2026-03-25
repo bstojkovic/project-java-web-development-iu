@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Project } from "../App";
+import { type ProjectProps } from "../App";
 
 interface ProjectFormProps {
-  currentProject: Project,
+  currentProject: ProjectProps,
   onFormCancelled: Function,
   onProjectSubmitted: Function,
 }
