@@ -17,14 +17,22 @@ const projects = [
 
 function App() {
   const [currentViewStr, setCurrentViewStr] = useState('repository');
-  const [currentProject, setCurrentProject] = useState(projects[0]);
+  const [projectInForm, setProjectInForm] = useState(projects[0]);
+  const [projectFormMode, setProjectFormMode] = useState('edit');
 
   function setCurrentView(viewName: string) {
     setCurrentViewStr(viewName);
   }
 
   function onProjectClicked(project: ProjectProps) {
-    setCurrentProject(project);
+    setProjectFormMode('edit');
+    setProjectInForm(project);
+    setCurrentView('project');
+  }
+  
+  function onProjectAdd() {
+    setProjectFormMode('create');
+    setProjectInForm({id: -1, title: "", description: "", completion: 0});
     setCurrentView('project');
   }
 
@@ -33,9 +41,26 @@ function App() {
   }
 
   function onProjectSubmitted(formData: FormData) {
-    currentProject.title = String(formData.get("title"));
-    currentProject.description = String(formData.get("description"));
-    currentProject.completion = Number(formData.get("completion"));
+    var newTitle = String(formData.get("title"));
+    var newDescription = String(formData.get("description"));
+    var newCompletion = Number(formData.get("completion"));
+
+    if (projectFormMode == 'edit') {
+      projectInForm.title = newTitle;
+      projectInForm.description = newDescription;
+      projectInForm.completion = newCompletion;
+    } else if (projectFormMode == 'create') {
+      var newProject = {
+        id: -1,
+        title: newTitle,
+        description: newDescription,
+        completion: newCompletion
+      }
+
+      projects.push(newProject)
+      setProjectInForm(newProject);
+    }
+
     setCurrentView('repository');
   }
 
@@ -44,9 +69,9 @@ function App() {
       <div>
         {
           currentViewStr == 'repository' ?
-          <Repository onProjectClicked={onProjectClicked} projects={projects}/> :
+          <Repository onProjectClicked={onProjectClicked} onProjectAdd={onProjectAdd} projects={projects}/> :
           <ProjectForm
-            currentProject={currentProject}
+            currentProject={projectInForm}
             onFormCancelled={onFormCancelled}
             onProjectSubmitted={onProjectSubmitted}
           />

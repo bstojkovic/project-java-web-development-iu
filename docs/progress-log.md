@@ -117,3 +117,13 @@
 * Replaced current `Project` class instance list into project data list
 * Redefined all references to project class into `ProjectProps` interface
 * Used `Project` component to render it inside the `Repository`
+
+## 28.3.2026.
+* While pushing the code, GitHub found one vulnerability
+  * I approved pull requests from Dependabot
+* Pulled the changes
+  * Tested the functionality of the app
+* Removed unnecessary empty tags that fixed a warning saying each list item should have a unique key (this is already handled)
+* Introduced flow for adding a project
+  * The problem is, it creates a project even if the form is not submitted because it follows the current flow, need to change that
+* Added a project form mode, when editing a project it's 'edit', on creating a new project it's 'create'

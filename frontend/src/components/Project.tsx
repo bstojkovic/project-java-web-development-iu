@@ -6,7 +6,6 @@ function Project(props: ProjectProps, onProjectClicked: Function) {
   }
 
   return (
-    <>
     <li
         key={props.id}
         onClick={()=>{projectClicked()}}
@@ -15,7 +14,6 @@ function Project(props: ProjectProps, onProjectClicked: Function) {
         <div>Description: <em>{props.description}</em></div>
         <div>Completion: {props.completion}%</div>
     </li>
-    </>
   )
 }
 
